@@ -39,45 +39,46 @@ sed -i '/using python/ s|^\(.*using python : \([0-9.][0-9.]*\) .*\);$|\1: /usr/i
 %install
 ./b2 %{?_smp_mflags} install threading=multi link=shared
 
-rm -rf %{buildroot}/usr/include/boost/
+rm -rf %{buildroot}/usr/include/boost
 rm -rf %{buildroot}/usr/lib64/cmake
-rm -rf %{buildroot}/usr/lib64/*.so
-rm -rf %{buildroot}/usr/lib64/*.a
+rm -f %{buildroot}/usr/lib64/*.so
+rm -f %{buildroot}/usr/lib64/*.so.1
+rm -f %{buildroot}/usr/lib64/*.a
 
 %files
-/usr/lib64/libboost_atomic.so.*
-/usr/lib64/libboost_chrono.so.*
-/usr/lib64/libboost_container.so.*
-/usr/lib64/libboost_context.so.*
-/usr/lib64/libboost_contract.so.*
-/usr/lib64/libboost_coroutine.so.*
-/usr/lib64/libboost_date_time.so.*
-/usr/lib64/libboost_fiber.so.*
-/usr/lib64/libboost_filesystem.so.*
-/usr/lib64/libboost_graph.so.*
-/usr/lib64/libboost_iostreams.so.*
-/usr/lib64/libboost_locale.so.*
-/usr/lib64/libboost_log.so.*
-/usr/lib64/libboost_log_setup.so.*
-/usr/lib64/libboost_math_c99.so.*
-/usr/lib64/libboost_math_c99f.so.*
-/usr/lib64/libboost_math_c99l.so.*
-/usr/lib64/libboost_math_tr1.so.*
-/usr/lib64/libboost_math_tr1f.so.*
-/usr/lib64/libboost_math_tr1l.so.*
-/usr/lib64/libboost_prg_exec_monitor.so.*
-/usr/lib64/libboost_program_options.so.*
-/usr/lib64/libboost_python38.so.*
-/usr/lib64/libboost_random.so.*
-/usr/lib64/libboost_regex.so.*
-/usr/lib64/libboost_serialization.so.*
-/usr/lib64/libboost_stacktrace_addr2line.so.*
-/usr/lib64/libboost_stacktrace_basic.so.*
-/usr/lib64/libboost_stacktrace_noop.so.*
-/usr/lib64/libboost_system.so.*
-/usr/lib64/libboost_thread.so.*
-/usr/lib64/libboost_timer.so.*
-/usr/lib64/libboost_type_erasure.so.*
-/usr/lib64/libboost_unit_test_framework.so.*
-/usr/lib64/libboost_wave.so.*
-/usr/lib64/libboost_wserialization.so.*
+/usr/lib64/libboost_atomic.so.1.*
+/usr/lib64/libboost_chrono.so.1.*
+/usr/lib64/libboost_container.so.1.*
+/usr/lib64/libboost_context.so.1.*
+/usr/lib64/libboost_contract.so.1.*
+/usr/lib64/libboost_coroutine.so.1.*
+/usr/lib64/libboost_date_time.so.1.*
+/usr/lib64/libboost_fiber.so.1.*
+/usr/lib64/libboost_filesystem.so.1.*
+/usr/lib64/libboost_graph.so.1.*
+/usr/lib64/libboost_iostreams.so.1.*
+/usr/lib64/libboost_locale.so.1.*
+/usr/lib64/libboost_log.so.1.*
+/usr/lib64/libboost_log_setup.so.1.*
+/usr/lib64/libboost_math_c99.so.1.*
+/usr/lib64/libboost_math_c99f.so.1.*
+/usr/lib64/libboost_math_c99l.so.1.*
+/usr/lib64/libboost_math_tr1.so.1.*
+/usr/lib64/libboost_math_tr1f.so.1.*
+/usr/lib64/libboost_math_tr1l.so.1.*
+/usr/lib64/libboost_prg_exec_monitor.so.1.*
+/usr/lib64/libboost_program_options.so.1.*
+/usr/lib64/libboost_python38.so.1.*
+/usr/lib64/libboost_random.so.1.*
+/usr/lib64/libboost_regex.so.1.*
+/usr/lib64/libboost_serialization.so.1.*
+/usr/lib64/libboost_stacktrace_addr2line.so.1.*
+/usr/lib64/libboost_stacktrace_basic.so.1.*
+/usr/lib64/libboost_stacktrace_noop.so.1.*
+/usr/lib64/libboost_system.so.1.*
+/usr/lib64/libboost_thread.so.1.*
+/usr/lib64/libboost_timer.so.1.*
+/usr/lib64/libboost_type_erasure.so.1.*
+/usr/lib64/libboost_unit_test_framework.so.1.*
+/usr/lib64/libboost_wave.so.1.*
+/usr/lib64/libboost_wserialization.so.1.*
